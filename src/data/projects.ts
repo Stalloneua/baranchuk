@@ -38,6 +38,35 @@ const bmwX6mImages = [
 
 export const projects: Project[] = [
   {
+    id: 'nordi-obiednuiemo-svit',
+    thumbnail: 'https://i.ytimg.com/vi/Mq4DUDplAVA/maxresdefault.jpg',
+    videoUrl: 'https://www.youtube.com/embed/Mq4DUDplAVA',
+    videoType: 'youtube',
+    year: '2025',
+    images: [
+      'https://i.ytimg.com/vi/Mq4DUDplAVA/maxresdefault.jpg',
+      'https://i.ytimg.com/vi/Mq4DUDplAVA/sddefault.jpg',
+      'https://i.ytimg.com/vi/Mq4DUDplAVA/hqdefault.jpg',
+      'https://i.ytimg.com/vi/Mq4DUDplAVA/mqdefault.jpg',
+    ],
+    copy: {
+      uk: {
+        title: "NORDI - ОБ'ЄДНУЄМО СВІТ",
+        description:
+          "Відеопроєкт для NORDI про рух, логістику й відчуття зв'язку між людьми та містами.\n\nУ кадрі — дорога, вантажівки, пакунки, люди й маленькі моменти, з яких складається велика історія доставки.",
+        client: 'NORDI',
+        role: 'Продакшн - Роман Баранчук\nЗйомка / Монтаж / Саунд-дизайн / Кольорокорекція',
+      },
+      en: {
+        title: 'NORDI - CONNECTING THE WORLD',
+        description:
+          'A video project for NORDI about movement, logistics, and the feeling of connection between people and cities.\n\nThe frame follows the road, trucks, parcels, people, and the small moments that shape a larger delivery story.',
+        client: 'NORDI',
+        role: 'Production - Roman Baranchuk\nFilming / Editing / Sound design / Color correction',
+      },
+    },
+  },
+  {
     id: 'bmw-x6m-garage-carshowroom',
     thumbnail: bmwX6mImages[6],
     videoUrl: 'https://www.youtube.com/embed/YfAoYbMC5F8',
