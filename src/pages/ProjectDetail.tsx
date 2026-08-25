@@ -44,12 +44,16 @@ export function ProjectDetail() {
           </div>
 
           <div className="video-frame">
-            <iframe
-              src={project.videoUrl}
-              title={copy.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            {project.videoType === 'file' ? (
+              <video src={project.videoUrl} poster={project.thumbnail} controls playsInline preload="metadata" />
+            ) : (
+              <iframe
+                src={project.videoUrl}
+                title={copy.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            )}
           </div>
         </section>
 

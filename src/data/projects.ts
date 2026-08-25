@@ -11,7 +11,7 @@ export interface Project {
   id: string;
   thumbnail: string;
   videoUrl: string;
-  videoType: 'youtube' | 'vimeo';
+  videoType: 'youtube' | 'vimeo' | 'file';
   year: string;
   images: string[];
   copy: Record<Language, ProjectCopy>;
@@ -36,7 +36,43 @@ const bmwX6mImages = [
   projectAsset('projects/bmw-x6m-garage/09-road-three-quarter.png'),
 ];
 
+const nordiImages = [
+  projectAsset('projects/nordi-obiednuiemo-svit/01-frame.jpg'),
+  projectAsset('projects/nordi-obiednuiemo-svit/02-frame.jpg'),
+  projectAsset('projects/nordi-obiednuiemo-svit/03-frame.jpg'),
+  projectAsset('projects/nordi-obiednuiemo-svit/04-frame.jpg'),
+  projectAsset('projects/nordi-obiednuiemo-svit/05-frame.jpg'),
+  projectAsset('projects/nordi-obiednuiemo-svit/06-frame.jpg'),
+  projectAsset('projects/nordi-obiednuiemo-svit/07-frame.jpg'),
+  projectAsset('projects/nordi-obiednuiemo-svit/08-frame.jpg'),
+  projectAsset('projects/nordi-obiednuiemo-svit/09-frame.jpg'),
+];
+
 export const projects: Project[] = [
+  {
+    id: 'nordi-obiednuiemo-svit',
+    thumbnail: nordiImages[3],
+    videoUrl: projectAsset('projects/nordi-obiednuiemo-svit/nordi-obiednuiemo-svit.mp4'),
+    videoType: 'file',
+    year: '2025',
+    images: nordiImages,
+    copy: {
+      uk: {
+        title: "NORDI - ОБ'ЄДНУЄМО СВІТ",
+        description:
+          "Відеопроєкт для NORDI про рух, логістику й відчуття зв'язку між людьми та містами.\n\nУ кадрі — дорога, вантажівки, пакунки, люди й маленькі моменти, з яких складається велика історія доставки.",
+        client: 'NORDI',
+        role: 'Продакшн - Роман Баранчук\nЗйомка / Монтаж / Саунд-дизайн / Кольорокорекція',
+      },
+      en: {
+        title: 'NORDI - CONNECTING THE WORLD',
+        description:
+          'A video project for NORDI about movement, logistics, and the feeling of connection between people and cities.\n\nThe frame follows the road, trucks, parcels, people, and the small moments that shape a larger delivery story.',
+        client: 'NORDI',
+        role: 'Production - Roman Baranchuk\nFilming / Editing / Sound design / Color correction',
+      },
+    },
+  },
   {
     id: 'bmw-x6m-garage-carshowroom',
     thumbnail: bmwX6mImages[6],
