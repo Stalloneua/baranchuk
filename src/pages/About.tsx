@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Link } from 'wouter';
 import { useI18n } from '../i18n';
 import { socialLinks } from '../data/projects';
@@ -16,11 +17,20 @@ export function About() {
           <div>
             <p className="section-number">(003)</p>
             <h1>{t.about.title}</h1>
+            <p className="about-subtitle">{t.about.subtitle}</p>
           </div>
 
           <div className="about-copy">
-            {t.about.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+            {t.about.paragraphs.map((paragraph, paragraphIndex) => (
+              <p key={paragraphIndex}>
+                {paragraph.map((segment, segmentIndex) =>
+                  typeof segment === 'string' ? (
+                    <Fragment key={segmentIndex}>{segment}</Fragment>
+                  ) : (
+                    <strong key={segmentIndex}>{segment.text}</strong>
+                  ),
+                )}
+              </p>
             ))}
 
             <div className="contact-list">

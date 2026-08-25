@@ -28,7 +28,8 @@ type TranslationDictionary = {
   };
   about: {
     title: string;
-    paragraphs: string[];
+    subtitle: string;
+    paragraphs: Array<Array<string | { text: string; strong: true }>>;
     instagramProduction: string;
     instagramPersonal: string;
     youtube: string;
@@ -74,11 +75,28 @@ const translations: Record<Language, TranslationDictionary> = {
       frameAlt: (title, index) => `${title}: кадр ${index}`,
     },
     about: {
-      title: 'ПРО МЕНЕ.',
+      title: 'РОМАН БАРАНЧУК',
+      subtitle: 'Оператор та режисер.',
       paragraphs: [
-        'Роман Баранчук — відеограф і монтажер, який працює під Baranchuk Production. У фокусі — автомобільні відео, reels, бренд-історії, backstage і чистий монтаж для соцмереж.',
-        'Його стиль хочеться тримати простим: без зайвого шуму, з увагою до руху, світла, дороги, людей у кадрі й деталей, які роблять відео живим.',
-        'Сайт зберігає мінімалістичну структуру референса, але додає власний напрям Роми: automotive-настрій, короткі social cuts і прямий контакт через його публічні профілі.',
+        ['Для мене відео — це насамперед ', { text: 'спосіб розповідати історії', strong: true }, '.'],
+        [
+          'У кожному проєкті для мене важливо не просто створити красиве зображення, а знайти ідею, атмосферу та емоцію, які варто передати глядачеві. Я прагну, щоб кожен кадр, рух камери, світло та звук працювали на загальну історію.',
+        ],
+        [
+          'Працюю з різними форматами — від ',
+          { text: 'комерційних та іміджевих відео до автомобільних зйомок, документальних історій та інтерв’ю', strong: true },
+          '. Окремо спеціалізуюся на автомобільному контенті, де поєдную динаміку, естетику та кінематографічний підхід.',
+        ],
+        [
+          'У роботі для мене важливі ',
+          { text: 'якість, актуальність та увага до деталей', strong: true },
+          '. Мене особливо цікавлять проєкти, у яких є простір для режисури, роботи з героями та пошуку власної візуальної мови.',
+        ],
+        [
+          'Постійно шукаю нові підходи до зйомки та сторітелінгу, експериментую з формою і прагну створювати відео, які ',
+          { text: 'не просто привертають увагу, а залишають після себе емоцію.', strong: true },
+        ],
+        [{ text: 'Відкритий до ваших проєктів.', strong: true }],
       ],
       instagramProduction: 'Instagram / Baranchuk Production',
       instagramPersonal: 'Instagram / Roma Baranchuk',
@@ -114,11 +132,28 @@ const translations: Record<Language, TranslationDictionary> = {
       frameAlt: (title, index) => `${title}: frame ${index}`,
     },
     about: {
-      title: 'ABOUT.',
+      title: 'ROMAN BARANCHUK',
+      subtitle: 'Cinematographer and director.',
       paragraphs: [
-        'Roman Baranchuk is a videographer and editor working under Baranchuk Production. His focus is automotive videos, reels, brand stories, backstage content, and clean edits for social platforms.',
-        'His style stays intentionally simple: no unnecessary noise, just close attention to movement, light, the road, people in frame, and the details that make a video feel alive.',
-        'The site keeps a minimal portfolio structure while adding Roma’s own direction: an automotive mood, short social cuts, and direct contact through his public profiles.',
+        ['For me, video is first and foremost ', { text: 'a way to tell stories', strong: true }, '.'],
+        [
+          'In every project, it is important for me not only to create a beautiful image, but to find the idea, atmosphere, and emotion worth passing on to the viewer. I want every frame, camera movement, light, and sound to serve the story as a whole.',
+        ],
+        [
+          'I work across different formats — from ',
+          { text: 'commercial and image films to automotive shoots, documentary stories, and interviews', strong: true },
+          '. I have a dedicated focus on automotive content, where I combine dynamics, aesthetics, and a cinematic approach.',
+        ],
+        [
+          'In my work, ',
+          { text: 'quality, relevance, and attention to detail', strong: true },
+          ' matter most. I am especially interested in projects that leave room for directing, working with people, and searching for a distinct visual language.',
+        ],
+        [
+          'I am constantly looking for new approaches to shooting and storytelling, experimenting with form, and aiming to create videos that ',
+          { text: 'do more than attract attention — they leave an emotion behind.', strong: true },
+        ],
+        [{ text: 'Open to your projects.', strong: true }],
       ],
       instagramProduction: 'Instagram / Baranchuk Production',
       instagramPersonal: 'Instagram / Roma Baranchuk',
